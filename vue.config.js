@@ -4,6 +4,7 @@ module.exports = {
     ? '/dist/'
     : '/',
   indexPath: '../index.html',
+
   //options
   configureWebpack: {
     externals: {
