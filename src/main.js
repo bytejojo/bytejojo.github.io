@@ -11,7 +11,7 @@ const _hmt = _hmt || [];
 setTimeout(() => {
   (() => {
     const hm = document.createElement('script');
-    hm.src = "https://hm.baidu.com/hm.js?308c2a1201455d8a0e28c5b83d29f0c3";
+    hm.src = "https://hm.baidu.com/hm.js?09e92fd6115b060dd0d8aea851bd7d38";
     const s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(hm, s);
   })();
@@ -21,7 +21,7 @@ router.beforeEach((to, from, next) => {
   iview.LoadingBar.start();
   Util.title(to.meta.title);
   if (to.path) {
-    _hmt.push(['_trackPageview', '/#' + to.fullPath]);
+    _hmt.push(['_trackPageview', to.fullPath]);
   }
   next();
 })
