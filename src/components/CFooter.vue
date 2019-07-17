@@ -28,14 +28,6 @@
 </template>
 
 <script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?a272ef2f22c89a2701f7ec7041179d4d";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-
   export default {
     name: 'CFooter',
     data() {
