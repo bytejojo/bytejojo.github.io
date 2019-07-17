@@ -1,5 +1,5 @@
 <template>
-  <a class="ribbon"
+  <a class="ribbon fixed"
      rel="noopener noreferrer"
      target="_blank"
      :href="href"
@@ -44,7 +44,7 @@
     text-indent: -999999px;
   }
 
-  .ribbon.fixed {
+  .fixed {
     position: fixed;
   }
 

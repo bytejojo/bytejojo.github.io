@@ -17,7 +17,7 @@
     </Row>
     <Row class="copyright">
       <p>遵循 <a :href="license.href">{{license.description}}</a></p>
-      <p>{{copyright}}</p>
+      <p v-html="copyright"></p>
     </Row>
 
     <BackTop :height="100" :bottom="200">
@@ -28,6 +28,14 @@
 </template>
 
 <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?a272ef2f22c89a2701f7ec7041179d4d";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+
   export default {
     name: 'CFooter',
     data() {
@@ -36,7 +44,7 @@
           description: 'MIT 开源协议',
           href: 'https://opensource.org/licenses/MIT'
         },
-        copyright: 'Copyright © 2019-2019 Lucas Hao'
+        copyright: 'Copyright &copy; 2019-2019 Lucas Hao'
       }
     }
   }
