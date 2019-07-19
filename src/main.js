@@ -21,7 +21,7 @@ router.beforeEach((to, from, next) => {
   iview.LoadingBar.start();
   Util.title(to.meta.title);
   if (to.path) {
-    _hmt.push(['_trackPageview', to.fullPath]);
+    _hmt.push(['_trackPageview', '/#' + to.fullPath]);
   }
   next();
 })
