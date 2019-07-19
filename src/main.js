@@ -5,6 +5,7 @@ import store from './store'
 import iview from './iview'
 import Util from './lib/util'
 
+
 Vue.config.productionTip = false
 
 var _hmt = _hmt || [];
@@ -15,7 +16,6 @@ router.beforeEach((to, from, next) => {
   iview.LoadingBar.start();
   Util.title(to.meta.title);
   if (to.path) {
-    console.log(to.fullPath);
     _hmt.push(['_trackPageview', '/#' + to.fullPath]);
   }
   next();
@@ -31,4 +31,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
-

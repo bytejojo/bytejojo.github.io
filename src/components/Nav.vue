@@ -40,8 +40,8 @@
           {ico: 'md-home', desc: '首页', name: '/', to: '/'},
           {ico: 'md-person', desc: '关于我', name: '/about', to: '/about'},
           {ico: 'md-book', desc: '学无止境', name: '/learn', to: '/about'},
-          {ico: 'md-keypad', desc: '时间轴', name: '/timeline', to: '/timeline'},
-          {ico: 'md-create', desc: '留言', name: '/message', to: '/about'}
+          {ico: 'md-create', desc: '留言', name: '/message', to: '/about'},
+          {ico: 'md-stats', desc: '网站统计', name: '/pv', to: '/pv'}
         ],
         showDrawer: false
       }
