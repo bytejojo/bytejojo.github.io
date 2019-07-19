@@ -36,7 +36,7 @@
           description: 'MIT 开源协议',
           href: 'https://opensource.org/licenses/MIT'
         },
-        copyright: 'Copyright &copy; 2019-2019 Lucas Hao'
+        copyright: 'Copyright &copy; 2019-'+new Date().getFullYear()+' Lucas Hao'
       }
     }
   }

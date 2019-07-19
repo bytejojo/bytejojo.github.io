@@ -4,14 +4,15 @@ module.exports = {
     ? '/dist/'
     : '/',
   indexPath: '../index.html',
-
+  productionSourceMap: false,
   //options
   configureWebpack: {
     externals: {
       'vue': 'Vue',
       'vue-router': 'VueRouter',
       'vuex': 'Vuex',
-      'iview': 'iview'
+      'iview': 'iview',
+      'echarts': 'echarts'
     }
   },
   css: {

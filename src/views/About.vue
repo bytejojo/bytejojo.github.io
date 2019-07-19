@@ -1,20 +1,19 @@
 <template>
   <div class="about">
-    <h1>This is an about page1</h1>
-    <e-chart :options="chartOptions" class="chart">123</e-chart>
+    <e-chart :options="chartOptions" class="chart"/>
   </div>
 </template>
 <script>
   import EChart from "@/components/ECharts";
 
   export default {
-    name: 'Aibbon',
+    name: 'About',
     components: {EChart},
     computed: {
       chartOptions: function () {
         return {
           title: {
-            text: '我家地位分布图'
+            text: '家庭地位'
           },
           tooltip: {},
           legend: {
@@ -25,7 +24,7 @@
           },
           yAxis: {},
           series: [{
-            name: '销量',
+            name: '地位',
             type: 'bar',
             data: [1000, 500, 50, 30, -99]
           }]
@@ -37,7 +36,7 @@
 
 <style scoped>
  .chart {
-   height: 300px;
+   height: 1000px;
    width: auto;
  }
 </style>

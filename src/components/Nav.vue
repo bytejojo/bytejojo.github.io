@@ -21,7 +21,7 @@
       <p>中文名：郝晓龙(HAOXIAOLONG)</p><br/>
       <p>英文名：Lucas</p><br/>
       <p>GitHub: https://github.com/happyzero</p><br/>
-      <p>WebSite: https://haoxiaolong.cn</p><br/>
+      <p>网址: https://haoxiaolong.cn</p><br/>
       <Divider>社区</Divider>
     </Drawer>
   </Header>
@@ -39,9 +39,9 @@
         menuItems: [
           {ico: 'md-home', desc: '首页', name: '/', to: '/'},
           {ico: 'md-person', desc: '关于我', name: '/about', to: '/about'},
-          {ico: 'md-book', desc: '学无止境', name: '/learn', to: '/about'},
-          {ico: 'md-create', desc: '留言', name: '/message', to: '/about'},
-          {ico: 'md-stats', desc: '网站统计', name: '/pv', to: '/pv'}
+          {ico: 'md-book', desc: '学无止境', name: '/learn', to: '/learn'},
+          {ico: 'md-create', desc: '留言', name: '/bbs', to: '/bbs'},
+          {ico: 'md-stats', desc: '网站统计', name: '/statistic', to: '/statistic'}
         ],
         showDrawer: false
       }

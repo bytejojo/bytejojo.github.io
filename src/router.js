@@ -10,24 +10,40 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: '首页',
       component: Home
     },
     {
       path: '/about',
-      name: 'about',
+      name: '关于我',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: '/pv',
-      name: 'pv',
+      path: '/learn',
+      name: '学无止境',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/PageView.vue')
-    }
+      component: () => import(/* webpackChunkName: "about" */ './views/Learn.vue')
+    },
+    {
+      path: '/Statistic',
+      name: '统计',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/Statistic.vue')
+    },
+    {
+      path: '/bbs',
+      name: '留言',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/BBS.vue')
+    },
   ]
 })
