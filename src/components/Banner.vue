@@ -21,5 +21,6 @@ export default {
 <style scoped>
   .content {
     font-size: 16px;
+    text-align: left;
   }
 </style>

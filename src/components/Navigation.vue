@@ -2,20 +2,24 @@
   <Header>
     <Menu mode="horizontal" theme="light" width="auto" :active-name="activeName">
       <Row>
-        <iCol span="2">
+        <iCol :xl="{span:2, offset:1}" :lg="{span:2, offset:1}" :md="{span:6, offset:1}" :xs="{span:11,offset:1}">
           <div @click="clickAvatar()">
             <Avatar style="background-color: #87d068" icon="ios-person"/>
             {{author}}
           </div>
         </iCol>
-        <iCol span="12" offset="10">
+        <iCol :xl="{span:12, offset:9}" :lg="{span:14, offset:7}" :md="{span:17, offset:0}" :xs="{span:0}">
           <MenuItem v-for="(item, index) in menuItems" :key="index" :name="item.name" :to="item.to">
             <Icon v-bind:type="item.ico"></Icon>
             {{item.desc}}
           </MenuItem>
         </iCol>
+        <iCol :xs="{span:1, offset:9}" :md="{span:0,offset:0}">
+          <Button size="large" icon="ios-menu" type="primary" shape="circle"></Button>
+        </iCol>
       </Row>
     </Menu>
+
     <Drawer placement="left" v-model="showDrawer">
       <Divider>关于我</Divider>
       <p>中文名：郝晓龙(HAOXIAOLONG)</p><br/>
@@ -61,32 +65,7 @@
 </script>
 
 <style scoped>
-  /*.menu-item span {
-    display: inline-block;
-    overflow: hidden;
-    width: 69px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    vertical-align: bottom;
-    transition: width .2s ease .2s;
-  }
+  .menu {
 
-  .menu-item i {
-    transform: translateX(0px);
-    transition: font-size .2s ease, transform .2s ease;
-    vertical-align: middle;
-    font-size: 16px;
   }
-
-  .collapsed-menu span {
-    width: 0px;
-    transition: width .2s ease;
-  }
-
-  .collapsed-menu i {
-    transform: translateX(5px);
-    transition: font-size .2s ease .2s, transform .2s ease .2s;
-    vertical-align: middle;
-    font-size: 22px;
-  }*/
 </style>
