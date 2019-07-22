@@ -1,21 +1,21 @@
 <template>
   <Header>
-    <Row>
-      <iCol span="2">
-        <div @click="clickAvatar()">
-          <Avatar style="background-color: #87d068" icon="ios-person"/>
-          {{author}}
-        </div>
-      </iCol>
-      <iCol span="12" offset="10">
-        <Menu mode="horizontal" theme="light" width="auto" :active-name="activeName">
+    <Menu mode="horizontal" theme="light" width="auto" :active-name="activeName">
+      <Row>
+        <iCol span="2">
+          <div @click="clickAvatar()">
+            <Avatar style="background-color: #87d068" icon="ios-person"/>
+            {{author}}
+          </div>
+        </iCol>
+        <iCol span="12" offset="10">
           <MenuItem v-for="(item, index) in menuItems" :key="index" :name="item.name" :to="item.to">
             <Icon v-bind:type="item.ico"></Icon>
             {{item.desc}}
           </MenuItem>
-        </Menu>
-      </iCol>
-    </Row>
+        </iCol>
+      </Row>
+    </Menu>
     <Drawer placement="left" v-model="showDrawer">
       <Divider>关于我</Divider>
       <p>中文名：郝晓龙(HAOXIAOLONG)</p><br/>
@@ -29,7 +29,7 @@
 
 <script>
   export default {
-    name: 'Nav',
+    name: 'Navigation',
     data() {
       return {
         author: 'Lucas',
@@ -61,7 +61,7 @@
 </script>
 
 <style scoped>
-  .menu-item span {
+  /*.menu-item span {
     display: inline-block;
     overflow: hidden;
     width: 69px;
@@ -88,5 +88,5 @@
     transition: font-size .2s ease .2s, transform .2s ease .2s;
     vertical-align: middle;
     font-size: 22px;
-  }
+  }*/
 </style>

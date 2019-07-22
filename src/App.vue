@@ -2,7 +2,7 @@
   <div id="app">
     <Ribbon/>
     <Layout>
-      <div is="Nav"></div>
+      <div is="Navigation"></div>
       <div is="Banner"></div>
       <!-- route outlet -->
       <!-- component matched by the route will render here -->
@@ -19,11 +19,11 @@
 
 <script>
   import Ribbon from "@/views/Ribbon"
-  import Nav from "@/components/Nav"
+  import Navigation from "@/components/Navigation"
   import Banner from "@/components/Banner"
   import CFooter from "@/components/CFooter"
 
   export default {
-    components: {Ribbon,Nav,Banner,CFooter}
+    components: {Ribbon,Navigation,Banner,CFooter}
   }
 </script>

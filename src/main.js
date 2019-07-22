@@ -13,6 +13,8 @@ var _hmt = _hmt || [];
 document.write(unescape("%3Cscript src='https://hm.baidu.com/h.js%3F09e92fd6115b060dd0d8aea851bd7d38'" +
   " type='text/javascript'%3E%3C/script%3E"));
 
+iview.LoadingBar.config({height:5});
+
 router.beforeEach((to, from, next) => {
   iview.LoadingBar.start();
   //Util.title(to.meta.title);
