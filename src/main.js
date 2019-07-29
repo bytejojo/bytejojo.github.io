@@ -5,7 +5,6 @@ import store from './store'
 import iview from './iview'
 import Util from './lib/util'
 
-
 Vue.config.productionTip = false
 
 //百度统计
