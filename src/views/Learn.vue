@@ -28,7 +28,7 @@
           baseURL: 'https://api.github.com'
         });
         // Alter defaults after instance has been created
-        gitHubApi.defaults.timeout = 2000;
+        gitHubApi.defaults.timeout = 30000;
         this.loading = true;
         gitHubApi.get('/users/happyzero', {
             params: {
