@@ -4,8 +4,7 @@
       <Row>
         <iCol :xl="{span:2, offset:1}" :lg="{span:2, offset:1}" :md="{span:6, offset:1}" :xs="{span:11,offset:1}">
           <div @click="clickAvatar()">
-            <Avatar style="background-color: #87d068" icon="ios-person"/>
-            {{author}}
+            <Avatar style="background-color: #87d068" icon="ios-person"/>{{author}}
           </div>
         </iCol>
         <iCol :xl="{span:11, offset:10}" :lg="{span:14, offset:7}" :md="{span:17, offset:0}" :xs="{span:0}">
@@ -31,19 +30,18 @@
       </Row>
     </Menu>
 
-    <Drawer placement="left" v-model="showDrawer" width="450px">
+    <Drawer placement="left" v-model="showDrawer">
       <Divider>关于我</Divider>
       <p>中文名：郝晓龙(HAOXIAOLONG)</p><br/>
       <p>英文名：Lucas</p><br/>
-      <p>GitHub: https://github.com/happyzero</p><br/>
       <Poptip trigger="hover">
         <Button icon="logo-github" to="https://github.com/happyzero/happyzero.github.io" target="_blank">Star</Button>
         <div slot="content">关注 GitHub</div>
       </Poptip>
-      <Divider>关注</Divider>
-      <vue-qr :logoSrc="qq.qrLogo" :text="qq.qrText" :logoScale="78" :size="200"></vue-qr>
-      <vue-qr :logoSrc="wechat.qrLogo" :text="wechat.qrText" :logoScale="78" :size="200"></vue-qr>
-      <Divider>其它</Divider>
+      <Divider>QQ</Divider>
+      <vue-qr :logoSrc="qq.qrLogo" :text="qq.qrText" :dotScale="qq.qrDotScale" :logoScale="78" :size="200"></vue-qr>
+      <Divider>微信</Divider>
+      <vue-qr :logoSrc="wechat.qrLogo" :text="wechat.qrText" :dotScale="wechat.qrDotScale" :logoScale="78" :size="200"></vue-qr>
     </Drawer>
   </Header>
 </template>
@@ -56,7 +54,7 @@
     components: {VueQr},
     data() {
       return {
-        author: 'Lucas',
+        author: '郝晓龙',
         isCollapsed: false,
         menuItems: [
           {ico: 'md-home', desc: '首页', name: '/', to: '/'},
@@ -67,10 +65,12 @@
         ],
         showDrawer: false,
         wechat: {
+          qrDotScale: 1,
           qrLogo: require('../assets/wechat.png'),
           qrText: 'https://u.wechat.com/EOIS45usvecafQqXT3ZMFZs'
         },
         qq: {
+          qrDotScale: 1,
           qrLogo: require('../assets/qq.png'),
           qrText: 'https://qm.qq.com/cgi-bin/qm/qr?k=pLC-xeIOnIdvFhbBfmW14w_mCCNhSg93'
         }

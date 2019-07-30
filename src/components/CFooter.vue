@@ -2,7 +2,7 @@
   <Footer>
     <Row class="footer">
       <iCol span="5" offset="2">
-        456
+        <Icon type="logo-github"/>GitHub
       </iCol>
       <iCol span="5">
         456

@@ -2,28 +2,19 @@
   <div class="about">
     <e-chart :options="chartOptions" class="chart"/>
     <div>
-      <vue-qr :logoSrc="qq.qrLogo" :text="qq.qrText" :logoScale="78" :size="200"></vue-qr>
-      <vue-qr :logoSrc="wechat.qrLogo" :text="wechat.qrText" :logoScale="78" :size="200"></vue-qr>
+
     </div>
   </div>
 </template>
 <script>
   import EChart from "@/components/ECharts";
-  import VueQr from 'vue-qr';
 
   export default {
     name: 'About',
-    components: {EChart,VueQr},
+    components: {EChart},
     data() {
       return {
-        wechat: {
-          qrLogo: require('../assets/wechat.png'),
-          qrText: 'https://u.wechat.com/EOIS45usvecafQqXT3ZMFZs'
-        },
-        qq: {
-          qrLogo: require('../assets/qq.png'),
-          qrText: 'https://qm.qq.com/cgi-bin/qm/qr?k=pLC-xeIOnIdvFhbBfmW14w_mCCNhSg93'
-        }
+        loading: false
       }
     },
     computed: {
