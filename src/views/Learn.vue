@@ -11,6 +11,7 @@
 </template>
 
 <script>
+  import utils from '../lib/util'
   export default {
     name: 'Learn',
     data() {
@@ -24,15 +25,16 @@
     },
     methods: {
       getGitHubAccountInfo: function () {
+
         const gitHubApi = this.$axios.create({
           baseURL: 'https://api.github.com'
         });
         // Alter defaults after instance has been created
-        gitHubApi.defaults.timeout = 30000;
+        gitHubApi.defaults.timeout = 2000;
         this.loading = true;
         gitHubApi.get('/users/happyzero', {
             params: {
-              access_token: '64f3a63a247153449fd1bca51d3c7ce849adf2f9'
+              access_token: ''+utils.aesDecrypt('VTJGc2RHVmtYMTgwSVducUs4aGtZU3pwWk05ZlF5d0RXZ2hjWXdmcHBSbVhENlVIdG5BTlhhY0xiZ1JzbW9Md1lkZnVCU3hYSDFIQ0U1OUVrT0xXdkE9PQ==')
             },
             headers: {
               'Accept': 'application/vnd.github.v3+json'
@@ -41,13 +43,23 @@
         ).then((response) => {
           this.gitHubAccountInfo = response.data;
         }).catch(error => {
-          this.error('加载GitHub信息错误',error.message);
+          if (error.response) {
+            // 发送请求后，服务端返回的响应码不是 2xx
+            console.error(error.response.status+'-'+error.message,JSON.stringify(error.response.data)+'<br/>'+JSON.stringify(error.response.headers));
+            this.error(error.response.status+'-'+error.message,JSON.stringify(error.response.data)+'<br/>'+JSON.stringify(error.response.headers));
+          } else if (error.request) {
+            // 发送请求但是没有响应返回
+            this.error('出现错误',error.message);
+          } else {
+            // 其他错误
+            this.error('其它错误', error.message);
+          }
         }).finally(() => this.loading = false);
       },
       error: function (noticeTitle, noticDescription) {
         this.$Notice.error({
-          title: noticeTitle ? '' : '错误',
-          desc: noticDescription ? '' : '出现错误。'
+          title: noticeTitle ? noticeTitle : '错误',
+          desc: noticDescription ? noticDescription : '出现错误。'
         });
       }
     }

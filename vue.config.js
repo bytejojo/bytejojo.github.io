@@ -12,7 +12,8 @@ module.exports = {
       'vue-router': 'VueRouter',
       'vuex': 'Vuex',
       'iview': 'iview',
-      'echarts': 'echarts'
+      'echarts': 'echarts',
+      'crypto-js': 'CryptoJS'
     }
   },
   css: {
