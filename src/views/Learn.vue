@@ -1,8 +1,23 @@
 <template>
   <div>
     <Card>
-      <p slot="title">我的GitHub</p>
+      <p slot="title">我的GitHub:{{gitHubAccountInfo.name}}</p>
       <Avatar :src="gitHubAccountInfo.avatar_url"/>
+      <p>login:{{gitHubAccountInfo.login}}</p>
+      <p>html_url:{{gitHubAccountInfo.html_url}}</p>
+      <p>followers_url:{{gitHubAccountInfo.followers_url}}</p>
+      <p>subscriptions_url:{{gitHubAccountInfo.subscriptions_url}}</p>
+      <p>organizations_url:{{gitHubAccountInfo.organizations_url}}</p>
+      <p>repos_url:{{gitHubAccountInfo.repos_url}}</p>
+      <p>received_events_url:{{gitHubAccountInfo.received_events_url}}</p>
+      <p>blog:{{gitHubAccountInfo.blog}}</p>
+      <p>location:{{gitHubAccountInfo.location}}</p>
+      <p>email:{{gitHubAccountInfo.email}}</p>
+      <p>bio:{{gitHubAccountInfo.bio}}</p>
+      <p>public_repos:{{gitHubAccountInfo.public_repos}}</p>
+      <p>public_gists:{{gitHubAccountInfo.public_gists}}</p>
+      <p>followers:{{gitHubAccountInfo.followers}}</p>
+      <p>following:{{gitHubAccountInfo.following}}</p>
       <p>创建时间:{{gitHubAccountInfo.created_at}}</p>
       <p>更新时间:{{gitHubAccountInfo.updated_at}}</p>
       <Spin size="large" fix v-if="loading"></Spin>
@@ -11,7 +26,6 @@
 </template>
 
 <script>
-  import utils from '../lib/util'
   export default {
     name: 'Learn',
     data() {
@@ -32,10 +46,7 @@
         // Alter defaults after instance has been created
         gitHubApi.defaults.timeout = 2000;
         this.loading = true;
-        gitHubApi.get('/users/happyzero', {
-            params: {
-              access_token: ''+utils.aesDecrypt('VTJGc2RHVmtYMTgwSVducUs4aGtZU3pwWk05ZlF5d0RXZ2hjWXdmcHBSbVhENlVIdG5BTlhhY0xiZ1JzbW9Md1lkZnVCU3hYSDFIQ0U1OUVrT0xXdkE9PQ==')
-            },
+          gitHubApi.get('/users/bytejojo', {
             headers: {
               'Accept': 'application/vnd.github.v3+json'
             }
