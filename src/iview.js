@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import iView from 'iview'
+import ViewUI from 'view-design'
 import './theme/default.less'
 
-Vue.use(iView)
+Vue.use(ViewUI)
 
-export default iView
+export default ViewUI

@@ -2,9 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import iview from './iview'
+import viewUI from './iview'
 import utils from './lib/util'
 import axios from 'axios'
+
 
 //全局使用axios
 Vue.prototype.$axios = axios
@@ -16,7 +17,7 @@ document.write(unescape("%3Cscript src='https://hm.baidu.com/h.js%3F09e92fd6115b
   " type='text/javascript'%3E%3C/script%3E"));
 
 router.beforeEach((to, from, next) => {
-  iview.LoadingBar.start();
+  viewUI.LoadingBar.start();
   utils.title(to.name);
   if (to.path) {
     _hmt.push(['_trackPageview', '/#' + to.fullPath]);
@@ -25,7 +26,7 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach(() => {
-  iview.LoadingBar.finish();
+  viewUI.LoadingBar.finish();
   window.scrollTo(0, 0);
 })
 

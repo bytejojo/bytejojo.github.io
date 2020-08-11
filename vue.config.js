@@ -11,15 +11,17 @@ module.exports = {
       'vue': 'Vue',
       'vue-router': 'VueRouter',
       'vuex': 'Vuex',
-      'iview': 'iview',
+      //'view-design': 'view-design',
       'echarts': 'echarts',
       'crypto-js': 'CryptoJS'
     }
   },
   css: {
-    loaderOptions: {// 向 CSS 相关的 loader 传递选项
+    loaderOptions: {
       less: {
-        javascriptEnabled: true
+        lessOptions: {
+          javascriptEnabled: true
+        }
       }
     }
   }

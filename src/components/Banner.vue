@@ -12,7 +12,7 @@ export default {
   data () {
     return {
       title: '公告',
-      content: '注意: 第一次发公告，有点紧张，不知道公告点啥，就乱写了。<br/>欢迎访问我的网站：<a href="https://haoxiaolong.cn">https://haoxiaolong.cn</a>'
+      content: '注意: 第一次发公告，有点紧张，不知道公告点啥，就乱写了。<br/>欢迎访问我的网站：<a href="https://www.haomuyang.com">https://www.haomuyang.com</a>'
     }
   }
 }

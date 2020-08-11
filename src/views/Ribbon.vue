@@ -11,7 +11,7 @@
     data() {
       return {
         title: 'Fork me on GitHub',
-        href: 'https://github.com/happyzero',
+        href: 'https://github.com/bytejojo',
         className: 'right-bottom'
       }
     }
