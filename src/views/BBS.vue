@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Row>
-      <iCol span="11">
+    <a-row>
+      <a-col span="11">
         <Divider orientation="left">留言输入</Divider>
         <Input prefix="ios-contact" v-model="name" clearable placeholder="请输入联系人名称"/>
         <br/>
@@ -11,10 +11,10 @@
         <Input prefix="ios-mail" v-model="email" clearable placeholder="请输入联系人邮箱"/>
         <br/><br/>
         <Input type="textarea" v-model="message" clearable placeholder="欢迎留言"/>
-      </iCol>
+      </a-col>
       <!--<Divider type="vertical" class="divider"/>-->
-      <iCol span="2" class="divider-container"><Divider type="vertical" class="divider"/></iCol>
-      <iCol span="11">
+      <a-col span="2" class="divider-container"><Divider type="vertical" class="divider"/></a-col>
+      <a-col span="11">
         <Divider orientation="left">留言展示</Divider>
         <Input prefix="ios-contact" v-model="name" readonly placeholder="请输入联系人名称"/>
         <br/>
@@ -24,8 +24,8 @@
         <Input prefix="ios-mail" v-model="email" readonly placeholder="请输入联系人邮箱"/>
         <br/><br/>
         <Input type="textarea" v-model="message" readonly placeholder="欢迎留言"/>
-      </iCol>
-    </Row>
+      </a-col>
+    </a-row>
   </div>
 </template>
 

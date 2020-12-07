@@ -11,7 +11,6 @@ module.exports = {
       'vue': 'Vue',
       'vue-router': 'VueRouter',
       'vuex': 'Vuex',
-      /*'view-design': 'view-design',*/
       'echarts': 'echarts',
       'crypto-js': 'CryptoJS'
     }

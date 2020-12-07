@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import viewUI from './iview'
 import utils from './lib/util'
 import axios from 'axios'
 
@@ -13,11 +12,11 @@ Vue.config.productionTip = false
 
 //百度统计
 var _hmt = _hmt || [];
-document.write(unescape("%3Cscript src='https://hm.baidu.com/h.js%3F09e92fd6115b060dd0d8aea851bd7d38'" +
-  " type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='https://hm.baidu.com/h.js%3F09e92fd6115b060dd0d8aea851bd7d38' type='text/javascript'%3E%3C/script%3E"));
 
 router.beforeEach((to, from, next) => {
-  viewUI.LoadingBar.start();
+  console.log(to.name);
+  //Antd.Progress.start();
   utils.title(to.name);
   if (to.path) {
     _hmt.push(['_trackPageview', '/#' + to.fullPath]);
@@ -26,7 +25,7 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach(() => {
-  viewUI.LoadingBar.finish();
+  //Antd.a-process.finish();
   window.scrollTo(0, 0);
 })
 

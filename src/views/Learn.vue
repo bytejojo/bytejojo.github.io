@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Card>
+    <a-card>
       <p slot="title">我的GitHub:{{gitHubAccountInfo.name}}</p>
-      <Avatar :src="gitHubAccountInfo.avatar_url"/>
+      <a-vatar :src="gitHubAccountInfo.avatar_url"/>
       <p>login:{{gitHubAccountInfo.login}}</p>
       <p>html_url:{{gitHubAccountInfo.html_url}}</p>
       <p>followers_url:{{gitHubAccountInfo.followers_url}}</p>
@@ -21,7 +21,7 @@
       <p>创建时间:{{gitHubAccountInfo.created_at}}</p>
       <p>更新时间:{{gitHubAccountInfo.updated_at}}</p>
       <Spin size="large" fix v-if="loading"></Spin>
-    </Card>
+    </a-card>
   </div>
 </template>
 

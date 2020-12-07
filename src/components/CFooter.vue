@@ -1,30 +1,18 @@
 <template>
-  <Footer>
-    <Row class="footer">
-      <iCol span="5" offset="2">
-        <Icon type="logo-github"/>GitHub
-      </iCol>
-      <iCol span="5">
-        456
-      </iCol>
-      <iCol span="5">
-        789
-      </iCol>
-      <iCol span="5">
-        456
-      </iCol>
-      <iCol span="2"><br/></iCol>
-    </Row>
-    <Row class="copyright">
+  <div>
+    <a-row class="footer">
+
+    </a-row>
+    <a-row class="copyright">
       <p>遵循 <a :href="license.href">{{license.description}}</a></p>
       <p v-html="copyright"></p>
-    </Row>
+    </a-row>
 
-    <BackTop :height="100" :bottom="200">
+    <a-back-top :height="100" :bottom="200">
       <div class="backTop">返回顶端</div>
-    </BackTop>
+    </a-back-top>
 
-  </Footer>
+  </div>
 </template>
 
 <script>
@@ -33,10 +21,10 @@
     data() {
       return {
         license: {
-          description: 'MIT 开源协议',
-          href: 'https://opensource.org/licenses/MIT'
+          description: this.$store.state.license.description,
+          href: this.$store.state.license.href
         },
-        copyright: 'Copyright &copy; 2019-'+new Date().getFullYear()+' Lucas Hao'
+        copyright: this.$store.state.copyright
       }
     }
   }
