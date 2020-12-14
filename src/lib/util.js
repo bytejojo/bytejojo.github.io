@@ -2,7 +2,7 @@ import CryptoJS from 'crypto-js'
 
 let util = {};
 util.title = function (title) {
-  title = title ? title + ' - 郝晓龙' : '首页 - 郝晓龙';
+  title = title ? title + ' - 好模样' : '首页 - 好模样';
   window.document.title = title;
 };
 

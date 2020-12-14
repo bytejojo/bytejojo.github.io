@@ -1,9 +1,7 @@
 // vue.config.js
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/dist/'
-    : '/',
-  indexPath: '../index.html',
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
+  indexPath: './index.html',
   productionSourceMap: false,
   //options
   configureWebpack: {
